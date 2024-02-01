@@ -1,0 +1,76 @@
+:root{
+    --white: #EDE7E3;
+    --bright: #FFA62B;
+    --lightblue: #82C0CC;
+    --main: #489FB5;
+    --dark:#16697A;
+    font-family: Arial, Helvetica, sans-serif;
+}
+/*-------navbar styling---------*/
+.navbar.is-primary {
+    background-color: var(--dark); 
+    padding-top: 0;
+    padding-bottom: 0;
+}
+
+.navbar-brand img {
+    max-height: 7rem; /*adjusts logo size*/
+    width: auto; 
+    align-content: start;
+}
+
+.navbar-menu {
+    justify-content: space-between;
+}
+
+.navbar-center,
+.navbar-end {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex: 1;
+}
+
+.navbar-center .title{
+    font-size: 2rem; /* main title size adjustment*/
+    color: var(--white);
+    margin-top: 2rem ;
+    display: inline-block; 
+    width: 100%;
+}
+
+.navbar-center {
+    flex-grow: 1;
+    text-align: center;
+    position: absolute;
+    left: 0;
+    right: 0;
+}
+
+.navbar-center p {
+    font-size: 2rem; 
+    color: var(--white); 
+    margin-bottom: 0; 
+}
+
+.navbar-end {
+    justify-content: flex-end;
+}
+
+/*---------hero container-------*/
+.title {
+    margin-bottom: 20px;
+    justify-content: center;
+    font-size: 4em; 
+}
+
+.subtitle {
+    margin-bottom: 50px;
+    font-size: 2em; 
+}
+
+.button.is-info.is-large {
+    font-size: 1.25em; 
+    padding: 1em 1.75em;
+    color: var(--white);
+}
