@@ -4,6 +4,8 @@
     --lightblue: #82C0CC;
     --main: #489FB5;
     --dark:#16697A;
+    --dark-rgb: 22, 105, 122;
+    --bright-hover: #cc8400;
     font-family: Arial, Helvetica, sans-serif;
 }
 /*-------navbar styling---------*/
@@ -14,7 +16,7 @@
 }
 
 .navbar-brand img {
-    max-height: 7rem; /*adjusts logo size*/
+    max-height: 8rem; /*adjusts logo size*/
     width: auto; 
     align-content: start;
 }
@@ -32,7 +34,7 @@
 }
 
 .navbar-center .title{
-    font-size: 2rem; /* main title size adjustment*/
+    font-size: 4rem; /* main title size adjustment*/
     color: var(--white);
     margin-top: 2rem ;
     display: inline-block; 
@@ -61,16 +63,63 @@
 .title {
     margin-bottom: 20px;
     justify-content: center;
-    font-size: 4em; 
+    font-size: 3rem; 
 }
+
 
 .subtitle {
     margin-bottom: 50px;
     font-size: 2em; 
 }
 
-.button.is-info.is-large {
-    font-size: 1.25em; 
+.button.is-bright.button.is-bright.is-large {
+    font-size: 1.5em; 
     padding: 1em 1.75em;
-    color: var(--white);
+    color: var(--dark);
+}
+/*hero background with paw print*/
+.hero-body {
+    background-image: url("../Images/HeroBackground.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+  
+  /* Box styling */
+  .box {
+    background: rgba(var(--dark-rgb), 0.75);
+  }
+  
+  /* Button styling */
+  .button.is-bright {
+    background-color: var(--bright);
+    border-color: var(--bright);
+    color: white;
+    font-weight: 700;
+  }
+  
+  .button.is-bright:hover {
+    background-color: var(--bright-hover);
+  }
+/*-----Get Started Page-----*/
+
+.header-title {
+    text-align: center;
+    padding: 1rem 0;
+    background-color: var(--bright);
+    border-radius: 10px;
+}
+
+.header-title .title {
+    color: white; 
+}
+
+.card {
+    margin-top: 20px; 
+    box-shadow: 0 2px 3px rgba(0,0,0,0.1); 
+}
+
+.card-header-title {
+    background-color: var(--dark); 
+    color: var(--white); 
 }

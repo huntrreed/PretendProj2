@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Your Information</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.9.3/css/bulma.min.css">
+    <link rel="stylesheet" href="/Public/Assets/CSS/style.css"> 
+</head>
+<body>
+
+    <nav class="navbar is-primary" role="navigation" aria-label="main navigation">
+        <div class="navbar-brand">
+            <img src="./Assets/Images/Logo.png" alt="FurEver Friends Logo">
+        </div>
+        <div class="navbar-center">
+            <p class="title">FurEver Friends</p> 
+        </div>
+    
+    </nav>
+    <section class="section" style="background: url('../Public/Assets/Images/HeroBackground.jpg') center / cover no-repeat;">
+        <div class="header-title" style="text-align: center; padding: 1rem; margin: 2rem;">
+            <h1 class="title is-2" style="color: white;">Tell us a bit more about you so we can match you to the right fur-ever friend!</h1>
+        </div>
+        <div class="container">
+            <div class="card" style="margin: 0 auto; max-width: 70%;">
+                <div class="card-content">
+                    <form>
+                        <div class="field">
+                            <label class="label">Name</label>
+                            <div class="control">
+                              <input class="input" type="text" placeholder="First and Last Name">
+                            </div>
+                          </div>
+                          <!--Form Questions-->
+                          <div class="field">
+                            <label class="label">Username</label>
+                            <div class="control has-icons-left has-icons-right">
+                              <input class="input is-success" type="text" placeholder="Username" value="bulma">
+                              <span class="icon is-small is-left">
+                                <i class="fas fa-user"></i>
+                              </span>
+                              <span class="icon is-small is-right">
+                                <i class="fas fa-check"></i>
+                              </span>
+                            </div>
+                            <p class="help is-success">This username is available</p>
+                          </div>
+                          <!--Password field, needs some validation to require characters, etc.-->
+                          <div class="field">
+                            <label class="label">Password</label>
+                            <div class="control has-icons-left">
+                                <input class="input" type="password" placeholder="Your Password">
+                                <span class="icon is-small is-left">
+                                    <i class="fas fa-lock"></i>
+                                </span>
+                            </div>
+                            <div class="field">
+                                <label class="label">Re-Enter Password</label>
+                                <div class="control has-icons-left">
+                                    <input class="input" type="password" placeholder="Your Password">
+                                    <span class="icon is-small is-left">
+                                        <i class="fas fa-lock"></i>
+                                    </span>
+                                </div>
+                        </div>
+                          <div class="field">
+                            <label class="label">Email</label>
+                            <div class="control has-icons-left has-icons-right">
+                              <input class="input is-danger" type="email" placeholder="Your Email" value="hello@">
+                              <span class="icon is-small is-left">
+                                <i class="fas fa-envelope"></i>
+                              </span>
+                              <span class="icon is-small is-right">
+                                <i class="fas fa-exclamation-triangle"></i>
+                              </span>
+                            </div>
+                            <p class="help is-danger">This email is invalid</p>
+                          </div>
+                          
+                          <div class="field">
+                            <label class="label">Are You Interested in Fostering a Senior Dog?</label>
+                            <div class="control">
+                                <label class="radio">
+                                    <input type="radio" name="seniorDog" value="yes">
+                                    Yes
+                                </label>
+                                <label class="radio">
+                                    <input type="radio" name="seniorDog" value="no">
+                                    No
+                                </label>
+                            </div>
+                            </div>
+                    
+                            <div class="field">
+                                <label class="label">Do You Have Other Pets?</label>
+                                <div class="control">
+                                    <div class="select">
+                                        <select name="otherPets">
+                                            <option value="">Select dropdown</option>
+                                            <option value="dogs">Other dog(s)</option>
+                                            <option value="cats">Cat(s)</option>
+                                            <option value="other">Other Type of Pet(s)</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="field">
+                                <label class="label">Do You Have Children in your Home?</label>
+                                <div class="control">
+                                    <label class="radio">
+                                        <input type="radio" name="fencedYard" value="yes">
+                                        Yes
+                                    </label>
+                                    <label class="radio">
+                                        <input type="radio" name="fencedYard" value="no">
+                                        No
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="field">
+                                <label class="label">Do You Have a Fenced In Yard?</label>
+                                <div class="control">
+                                    <label class="radio">
+                                        <input type="radio" name="fencedYard" value="yes">
+                                        Yes
+                                    </label>
+                                    <label class="radio">
+                                        <input type="radio" name="fencedYard" value="no">
+                                        No
+                                    </label>
+                                </div>
+                            </div>
+                            <!--This doesn't need to link to anything for our data, just thought it was pertinent to include-->
+                            <label class="label">What Is Your Previous Experience Caring for Dogs?</label>
+                            <div class="control">
+                                    <div class="select">
+                                        <select name="otherPets">
+                                            <option value="">Select dropdown</option>
+                                            <option value="NoExp">No Experience</option>
+                                            <option value="SomeExp">Some experience but never owned one</option>
+                                            <option value="PriorExp">I have owned a dog, but it was awhile ago</option>
+                                            <option value="ALotofExp">I have extensive experience caring for dogs</option>
+                                        </select>
+                              </div>
+                            </div>
+                    <!--These don't need to link to anything for our data, just thought they was pertinent to include-->
+                          <div class="field">
+                            <label class="label">Anything Else We Should Know?</label>
+                            <div class="control">
+                              <textarea class="textarea" placeholder="Other Information"></textarea>
+                            </div>
+                          </div>
+
+                          <div class="field">
+                            <label class="label">Why Are You Interested in Fostering?</label>
+                            <div class="control">
+                              <textarea class="textarea" placeholder="Your Answer Here"></textarea>
+                            </div>
+                          </div>
+                          <div class="field is-grouped">
+                            <div class="control">
+                                <button class="button is-link">Submit</button>
+                            </div>
+                            <div class="control">
+                                <button type="button" class="button is-link is-light">Cancel</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+</html>
