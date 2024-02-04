@@ -8,6 +8,7 @@
     --bright-hover: #cc8400;
     font-family: Arial, Helvetica, sans-serif;
 }
+
 /*-------navbar styling---------*/
 .navbar.is-primary {
     background-color: var(--dark); 
@@ -59,13 +60,12 @@
     justify-content: flex-end;
 }
 
-/*---------hero container-------*/
+/*---------hero container main page (index.html)-------*/
 .title {
     margin-bottom: 20px;
     justify-content: center;
     font-size: 3rem; 
 }
-
 
 .subtitle {
     margin-bottom: 50px;
@@ -85,12 +85,12 @@
     background-repeat: no-repeat;
 }
   
-  /* Box styling */
+  /* Box styling on main index.html page */
   .box {
     background: rgba(var(--dark-rgb), 0.75);
   }
   
-  /* Button styling */
+  /* Button styling index.html page */
   .button.is-bright {
     background-color: var(--bright);
     border-color: var(--bright);
@@ -101,6 +101,7 @@
   .button.is-bright:hover {
     background-color: var(--bright-hover);
   }
+
 /*-----Get Started Page-----*/
 
 .header-title {
@@ -123,3 +124,108 @@
     background-color: var(--dark); 
     color: var(--white); 
 }
+
+
+/*---Dog Options.html Styling-----*/
+
+.DogOptions {
+    background-color: var(--white);
+}
+/*Title box*/
+.title-box {
+    text-align: center; 
+    margin: 1rem auto;
+    margin-bottom: .5rem; 
+    width: 50%;
+    padding: 1rem; 
+    background-color: var(--bright); 
+    color: var(--white); 
+    border-radius: 20px; 
+}
+
+.title.is-1 {
+    margin-bottom: 1rem; 
+    font-size: 2.5rem; 
+}
+
+.subtitle.is-3 {
+    font-size: 1.5rem; 
+    color: var(--white); 
+}
+
+
+
+/*Dog Card Carousel Options*/
+.carousel-container {
+    display: flex;
+    justify-content: center;
+    overflow: hidden;
+    position: relative;
+  }
+  
+  .carousel-content {
+    display: flex;
+    transition: transform 0.5s ease;
+    will-change: transform;
+    padding: 20px;
+    justify-content: center; 
+  }
+  
+  .card {
+    width: 500px; /* Adjusts width of individual cards */
+    margin: 0 10px; /* Gives space between cards */
+    border-radius: 5%;
+    background-color: var(--lightblue);
+  }
+
+  .card-header-title {
+    text-align: center;
+    background-color: var(--main);
+    font-size: 3rem;
+    color: var(--dark);
+  }
+  
+  .carousel-arrow {
+    position: absolute;
+    top: 50%;
+    z-index: 2;
+    transform: translateY(-50%);
+    font-size: 4rem; 
+    color: var(--dark);
+    background: transparent; 
+    border: none; 
+    cursor: pointer; 
+  }
+  
+  .carousel-arrow:hover {
+    color: var(--bright); 
+  }
+  .left-arrow {
+    left: 70px;
+  }
+  
+  .right-arrow {
+    right: 70px;
+  }
+
+  /*heart button saving turns a color*/
+
+  .heart-button {
+    font-size: 44px;
+    background: var(--main);
+    border: none;
+    cursor: pointer;
+  }
+
+.heart-button.saved,
+.heart-button:hover {
+  color: var(--bright);
+}
+
+.heart-button i {
+    color: var(--white); 
+  }
+
+  .heart-button.saved i {
+    color: var(--bright); 
+  }

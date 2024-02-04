@@ -2,10 +2,43 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Available Dogs</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.9.3/css/bulma.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="/Public/Assets/CSS/style.css">
 </head>
-<body>
+<body class="DogOptions">
+    <nav class="navbar is-primary" role="navigation" aria-label="main navigation">
+        <div class="navbar-brand">
+            <img src="./Assets/Images/Logo.png" alt="FurEver Friends Logo">
+        </div>
+        <div class="navbar-center">
+            <p class="title">FurEver Friends</p> 
+        </div>
+        <div class="navbar-end">
+            <a class="navbar-item" href="#">Logged in as ___</a>
+            <a class="navbar-item" href="#">View Saved Pets</a>
+            <a class="navbar-item" href="#">Edit my Prefrences</a>
+            <a class="navbar-item" href="#">About Us</a>
+        </div>
+    </nav>
+
+    <div class="title-box">
+        <h1 class="title is-1">Available Pets</h1>
+        <h2 class="subtitle is-3">Click the arrows to see more dogs available for foster! To save a specific dog, click the heart button next to their name.</h2>
+    </div>
+    <!-- Carousel Section starts here -->
+    <section class="carousel-container">
+    </section>
+
+    <section class="carousel-container">
+        <button class="carousel-arrow left-arrow"><i class="fas fa-chevron-left"></i></button>
+        <div class="carousel-content">
+            <!-- Dynamic cards injected here from java file -->
+        </div>
+        <button class="carousel-arrow right-arrow"><i class="fas fa-chevron-right"></i></button>
+    </section>
     
+    <script src="/Public/Assets/script.js"></script>
 </body>
 </html>
