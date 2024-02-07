@@ -1,231 +1,281 @@
 :root{
-    --white: #EDE7E3;
-    --bright: #FFA62B;
-    --lightblue: #82C0CC;
-    --main: #489FB5;
-    --dark:#16697A;
-    --dark-rgb: 22, 105, 122;
-    --bright-hover: #cc8400;
-    font-family: Arial, Helvetica, sans-serif;
+  --white: #EDE7E3;
+  --bright: #FFA62B;
+  --lightblue: #82C0CC;
+  --main: #489FB5;
+  --dark:#16697A;
+  --dark-rgb: 22, 105, 122;
+  --bright-hover: #cc8400;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 /*-------navbar styling---------*/
 .navbar.is-primary {
-    background-color: var(--dark); 
-    padding-top: 0;
-    padding-bottom: 0;
+  background-color: var(--dark); 
+  padding-top: 0;
+  padding-bottom: 0;
 }
 
 .navbar-brand img {
-    max-height: 8rem; /*adjusts logo size*/
-    width: auto; 
-    align-content: start;
+  max-height: 8rem; /*adjusts logo size*/
+  width: auto; 
+  align-content: start;
 }
 
 .navbar-menu {
-    justify-content: space-between;
+  justify-content: space-between;
 }
 
 .navbar-center,
 .navbar-end {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex: 1;
 }
 
 .navbar-center .title{
-    font-size: 4rem; /* main title size adjustment*/
-    color: var(--white);
-    margin-top: 2rem ;
-    display: inline-block; 
-    width: 100%;
+  font-size: 4rem; /* main title size adjustment*/
+  color: var(--white);
+  margin-top: 2rem ;
+  display: inline-block; 
+  width: 100%;
 }
 
 .navbar-center {
-    flex-grow: 1;
-    text-align: center;
-    position: absolute;
-    left: 0;
-    right: 0;
+  flex-grow: 1;
+  text-align: center;
+  position: absolute;
+  left: 0;
+  right: 0;
 }
 
 .navbar-center p {
-    font-size: 2rem; 
-    color: var(--white); 
-    margin-bottom: 0; 
+  font-size: 2rem; 
+  color: var(--white); 
+  margin-bottom: 0; 
 }
 
 .navbar-end {
-    justify-content: flex-end;
+  justify-content: flex-end;
 }
 
 /*---------hero container main page (index.html)-------*/
 .title {
-    margin-bottom: 20px;
-    justify-content: center;
-    font-size: 3rem; 
+  margin-bottom: 20px;
+  justify-content: center;
+  font-size: 3rem; 
 }
 
 .subtitle {
-    margin-bottom: 50px;
-    font-size: 2em; 
+  margin-bottom: 50px;
+  font-size: 2em; 
 }
 
 .button.is-bright.button.is-bright.is-large {
-    font-size: 1.5em; 
-    padding: 1em 1.75em;
-    color: var(--dark);
+  font-size: 1.5em; 
+  padding: 1em 1.75em;
+  color: var(--dark);
 }
 /*hero background with paw print*/
 .hero-body {
-    background-image: url("../Images/HeroBackground.jpg");
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
+  background-image: url("../Images/HeroBackground.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
-  
-  /* Box styling on main index.html page */
-  .box {
-    background: rgba(var(--dark-rgb), 0.75);
-  }
-  
-  /* Button styling index.html page */
-  .button.is-bright {
-    background-color: var(--bright);
-    border-color: var(--bright);
-    color: white;
-    font-weight: 700;
-  }
-  
-  .button.is-bright:hover {
-    background-color: var(--bright-hover);
-  }
+
+/* Box styling on main index.html page */
+.box {
+  background: rgba(var(--dark-rgb), 0.75);
+}
+
+/* Button styling index.html page */
+.button.is-bright {
+  background-color: var(--bright);
+  border-color: var(--bright);
+  color: white;
+  font-weight: 700;
+}
+
+.button.is-bright:hover {
+  background-color: var(--bright-hover);
+}
 
 /*-----Get Started Page-----*/
 
 .header-title {
-    text-align: center;
-    padding: 1rem 0;
-    background-color: var(--bright);
-    border-radius: 10px;
+  text-align: center;
+  padding: 1rem 0;
+  background-color: var(--bright);
+  border-radius: 10px;
 }
 
 .header-title .title {
-    color: white; 
+  color: white; 
 }
 
 .card {
-    margin-top: 20px; 
-    box-shadow: 0 2px 3px rgba(0,0,0,0.1); 
+  margin-top: 20px; 
+  box-shadow: 0 2px 3px rgba(0,0,0,0.1); 
 }
 
 .card-header-title {
-    background-color: var(--dark); 
-    color: var(--white); 
+  background-color: var(--dark); 
+  color: var(--white); 
 }
 
 
 /*---Dog Options.html Styling-----*/
 
 .DogOptions {
-    background-color: var(--white);
+  background-color: var(--white);
 }
 /*Title box*/
 .title-box {
-    text-align: center; 
-    margin: 1rem auto;
-    margin-bottom: .5rem; 
-    width: 50%;
-    padding: 1rem; 
-    background-color: var(--bright); 
-    color: var(--white); 
-    border-radius: 20px; 
+  text-align: center; 
+  margin: 1rem auto;
+  margin-bottom: .5rem; 
+  width: 50%;
+  padding: 1rem; 
+  background-color: var(--bright); 
+  color: var(--white); 
+  border-radius: 20px; 
 }
 
 .title.is-1 {
-    margin-bottom: 1rem; 
-    font-size: 2.5rem; 
+  margin-bottom: 1rem; 
+  font-size: 2.5rem; 
 }
 
 .subtitle.is-3 {
-    font-size: 1.5rem; 
-    color: var(--white); 
+  font-size: 1.5rem; 
+  color: var(--white); 
 }
 
 
 
 /*Dog Card Carousel Options*/
 .carousel-container {
-    display: flex;
-    justify-content: center;
-    overflow: hidden;
-    position: relative;
-  }
-  
-  .carousel-content {
-    display: flex;
-    transition: transform 0.5s ease;
-    will-change: transform;
-    padding: 20px;
-    justify-content: center; 
-  }
-  
-  .card {
-    width: 500px; /* Adjusts width of individual cards */
-    margin: 0 10px; /* Gives space between cards */
-    border-radius: 5%;
-    background-color: var(--lightblue);
-  }
+  display: flex;
+  justify-content: center;
+  overflow: hidden;
+  position: relative;
+}
 
-  .card-header-title {
-    text-align: center;
-    background-color: var(--main);
-    font-size: 3rem;
-    color: var(--dark);
-  }
-  
-  .carousel-arrow {
-    position: absolute;
-    top: 50%;
-    z-index: 2;
-    transform: translateY(-50%);
-    font-size: 4rem; 
-    color: var(--dark);
-    background: transparent; 
-    border: none; 
-    cursor: pointer; 
-  }
-  
-  .carousel-arrow:hover {
-    color: var(--bright); 
-  }
-  .left-arrow {
-    left: 70px;
-  }
-  
-  .right-arrow {
-    right: 70px;
-  }
+.carousel-content {
+  display: flex;
+  transition: transform 0.5s ease;
+  will-change: transform;
+  padding: 20px;
+  justify-content: center; 
+}
 
-  /*heart button saving turns a color*/
+.card {
+  width: 500px; /* Adjusts width of individual cards */
+  margin: 0 10px; 
+  border-radius: 5%;
+  background-color: var(--lightblue);
+}
 
-  .heart-button {
-    font-size: 44px;
-    background: var(--main);
-    border: none;
-    cursor: pointer;
-  }
+.card-header-title {
+  text-align: center;
+  background-color: var(--main);
+  font-size: 3rem;
+  color: var(--dark);
+}
+
+.carousel-arrow {
+  position: absolute;
+  top: 50%;
+  z-index: 2;
+  transform: translateY(-50%);
+  font-size: 4rem; 
+  color: var(--dark);
+  background: transparent; 
+  border: none; 
+  cursor: pointer; 
+}
+
+.carousel-arrow:hover {
+  color: var(--bright); 
+}
+.left-arrow {
+  left: 70px;
+}
+
+.right-arrow {
+  right: 70px;
+}
+
+/*heart button saving turns a color*/
+
+.heart-button {
+  font-size: 44px;
+  background: var(--main);
+  border: none;
+  cursor: pointer;
+}
 
 .heart-button.saved,
 .heart-button:hover {
-  color: var(--bright);
+color: var(--bright);
 }
 
 .heart-button i {
-    color: var(--white); 
-  }
+  color: var(--white); 
+}
 
-  .heart-button.saved i {
-    color: var(--bright); 
-  }
+.heart-button.saved i {
+  color: var(--bright); 
+}
+
+  /* Style for "More Info" button on dog cards */
+
+.button.more-info {
+  background-color: var(--main); 
+  color: var(--white); 
+  border: none; 
+  cursor: pointer; 
+  font-weight: bold; 
+  margin-top: 0.5rem; 
+  transition: background-color 0.3s ease; 
+}
+
+/* hover effect for "More Info" button */
+.button.more-info:hover {
+  background-color: var(--bright); 
+  color: var(--dark); 
+}
+
+.breed-info .title {
+  text-align: center; 
+  font-weight: bold; 
+  margin-top: 1rem; 
+}
+
+/*saved pets section*/
+#saved-pets-section {
+  background-color: var(--bright); 
+  color: var(--white); 
+  margin-top: 2rem; 
+  width: 90%;
+  padding: 1rem;
+  border-radius: 20px;
+  display: none; /* Keeps Initially hidden */
+}
+
+#saved-pets-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); 
+  gap: 1rem;
+  padding: 1rem;
+  width: 100%; 
+}
+
+#saved-pets-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); 
+  gap: 2rem; 
+  padding: 1rem;
+}
