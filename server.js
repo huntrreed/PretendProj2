@@ -43,11 +43,12 @@ app.use((req, res, next) => {
 
 const PORT = process.env.PORT || 5502;
 
-// Set up Handlebars.js engine with custom helpers
-const hbs = exphbs.create({
-  defaultLayout: 'main',
-  partialsDir: ['views/partials/'] // Directory where partials are located
-});
+app.engine('handlebars', exphbs({
+  defaultLayout: 'main', // Name of the main layout
+  layoutsDir: 'views/layouts/', // Directory for layout files
+  partialsDir: 'views/partials/' // Directory for partial files
+}));
+app.set('view engine', 'handlebars');
 
 app.engine('handlebars', hbs.engine);
 app.set('view engine', 'handlebars');
