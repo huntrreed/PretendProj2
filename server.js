@@ -1,6 +1,5 @@
 require('dotenv').config();
 
-const mysql = require('mysql');
 const Sequelize = require('sequelize');
 const session = require('express-session');
 const path = require('path');
