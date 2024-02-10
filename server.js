@@ -5,13 +5,26 @@ const session = require('express-session');
 const SequelizeStore = require('connect-session-sequelize')(session.Store);
 const path = require('path');
 const express = require('express');
-const exphbs = require('express-handlebars');
+const { engine } = require('express-handlebars'); // Corrected require for express-handlebars
 const helpers = require('./utils/helpers');
 const cors = require('cors');
 
 const sequelize = require('./config/connection.js');
 
 const app = express();
+
+const hbs = engine({
+  helpers: helpers,
+  extname: '.handlebars', // Set the extension name
+  defaultLayout: 'main', // Set the default layout
+  layoutsDir: path.join(__dirname, 'views/layouts'), // Set the layouts directory
+  partialsDir: path.join(__dirname, 'views/partials') // Set the partials directory
+});
+
+// Register `hbs.engine` with the Express app
+app.engine('handlebars', hbs);
+app.set('view engine', 'handlebars');
+
 
 // Update your session configuration
 app.use(session({
@@ -41,21 +54,8 @@ app.use((req, res, next) => {
   next();
 });
 
-const PORT = process.env.PORT || 5502;
 
-const hbs = engine({
-  // Configuration options if you have any
-});
 
-app.engine('handlebars', exphbs({
-  defaultLayout: 'main', // Name of the main layout
-  layoutsDir: 'views/layouts/', // Directory for layout files
-  partialsDir: 'views/partials/' // Directory for partial files
-}));
-app.set('view engine', 'handlebars');
-
-app.engine('handlebars', hbs.engine);
-app.set('view engine', 'handlebars');
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
@@ -72,6 +72,7 @@ const viewRoutes = require('./controllers/views');
 app.use('/', viewRoutes);
 
 
+const PORT = process.env.PORT || 5502;
 sequelize
   .authenticate()
   .then(() => {
