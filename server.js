@@ -58,7 +58,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 // Define a route for the root path to render the 'homepage' view
 app.get('/', (req, res) => {
-  res.render('homepage'); // This will render views/homepage.handlebars
+  res.render('homepage', { title: 'Fur-Ever Friends' });
 });
 
 const userRoutes = require('./controllers/api/userRoutes.js');

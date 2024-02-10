@@ -1,53 +1,40 @@
-<!DOCTYPE html>
-<html>
+{{!-- Set the layout to use the main layout (main.handlebars) --}}
+{{!< layout}}
+
+{{!-- Dynamic title can be passed when rendering the template from the route --}}
 <head>
     <meta charset="UTF-8">
-    <title>{{title}}</title> <!-- Dynamic title -->
+    <title>{{title}}</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.9.3/css/bulma.min.css">
-    <link rel="stylesheet" href="/css/style.css"> <!-- Root-relative path -->
+    <link rel="stylesheet" href="/css/style.css">
 </head>
 <body>
 
-<!-- Navbar (can be turned into a partial if used on multiple pages) -->
-<nav class="navbar is-primary" role="navigation" aria-label="main navigation">
-  <div class="navbar-brand">
-    <img src="/images/Logo.png" alt="FurEver Friends Logo"> <!-- Root-relative path -->
-  </div>
-  <div class="navbar-center">
-    <p class="title">FurEver Friends</p> 
-  </div>
-  <div class="navbar-end">
-    <a class="navbar-item" href="#">Login</a>
-    <a class="navbar-item" id="about-us-button" href="#">About Us</a>
-  </div>
-</nav>
+{{!-- The navbar is included from the partials --}}
+{{> navbar}}
 
-  <!-- About Us Modal -->
-  <!-- ... Modal content remains the same ... -->
-
-<!-- Hero container -->
+{{!-- Hero section of the page --}}
 <section class="hero is-primary is-medium">
-  <div class="hero-body">
-    <div class="container">
-      <!-- Card container -->
-      <div class="box" style="max-width: 600px; margin: 0 auto;">
-        <h1 class="title has-text-centered">
-          Looking for a New Friend?
-        </h1>
-        <h2 class="subtitle has-text-centered">
-          Find the perfect foster dog today!
-        </h2>
-        <div class="has-text-centered">
-          <a href="/get-started" class="button is-bright is-large"> <!-- Handlebars path -->
-            Get Started
-          </a>
+    <div class="hero-body">
+        <div class="container">
+            <div class="box" style="max-width: 600px; margin: 0 auto;">
+                <h1 class="title has-text-centered">
+                    Looking for a New Friend?
+                </h1>
+                <h2 class="subtitle has-text-centered">
+                    Find the perfect foster dog today!
+                </h2>
+                <div class="has-text-centered">
+                    <a href="/get-started" class="button is-bright is-large">
+                        Get Started
+                    </a>
+                </div>
+            </div>
         </div>
-      </div>
     </div>
-  </div>
 </section>
 
-<script src="/js/main.js"></script> <!-- Root-relative path, consider moving inline JS here -->
+<script src="/js/main.js"></script>
 </body>
 </html>
