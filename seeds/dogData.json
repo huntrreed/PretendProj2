@@ -1,0 +1,26 @@
+[
+  {
+    "name": "Max",
+    "description": "Max is a friendly and energetic Labrador Retriever. He loves playing fetch and going on long walks.",
+    "age": 7,
+    "size": "Large",
+    "kidFriendly": true,
+    "user_id": 1
+  },
+  {
+    "name": "Daisy",
+    "description": "Daisy is a playful and curious Beagle. She is good with other dogs and enjoys exploring the outdoors.",
+    "age": 3,
+    "size": "Medium",
+    "kidFriendly": false,
+    "user_id": 2
+  },
+  {
+    "name": "Molly",
+    "description": "Molly is a sweet and affectionate Shih Tzu. She enjoys cuddling and is good with other pets.",
+    "age": 10,
+    "size": "Small",
+    "kidFriendly": true,
+    "user_id": 3
+  }
+]

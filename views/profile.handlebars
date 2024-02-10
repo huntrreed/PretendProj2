@@ -1,0 +1,17 @@
+<div class="row">
+  <div class="col-auto">
+    <h2>Welcome, {{user.name}}!</h2>
+  </div>
+</div>
+{{#if user.seniorDog}}
+<a href="/alldogs">See your matches!</a>
+
+{{else}}
+<a href="/youngDogs">See your matches!</a>
+{{/if}}
+
+<a href="/savedDogs">See your saved dogs!</a>
+
+</div>
+
+<script src="./js/profile.js"></script>

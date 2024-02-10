@@ -3,61 +3,92 @@
 <head>
     <meta charset="UTF-8">
     <title>Fur-Ever Friends</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.9.3/css/bulma.min.css">
     <link rel="stylesheet" href="./Assets/CSS/style.css">
 </head>
 <body>
 
- <!-- Navbar -->
- <nav class="navbar is-primary" role="navigation" aria-label="main navigation">
-    <div class="navbar-brand">
-        <img src="./Assets/Images/Logo.png" alt="FurEver Friends Logo">
-    </div>
-    <div class="navbar-center">
-        <p class="title">FurEver Friends</p> 
-    </div>
-    <div class="navbar-end">
-        <a class="navbar-item" href="#">Login</a>
-        <a class="navbar-item" href="#">View Saved Pets</a>
-        <a class="navbar-item" href="#">About Us</a>
-    </div>
+<!-- Navbar -->
+<nav class="navbar is-primary" role="navigation" aria-label="main navigation">
+  <div class="navbar-brand">
+    <img src="./Assets/Images/Logo.png" alt="FurEver Friends Logo">
+</div>
+<div class="navbar-center">
+    <p class="title">FurEver Friends</p> 
+</div>
+<div class="navbar-end">
+    <a class="navbar-item" href="#">Login</a>
+    <a class="navbar-item" id="about-us-button" href="#">About Us</a>
+</div>
 </nav>
 
-    <script>
-        document.addEventListener('DOMContentLoaded', () => {
-            const navbarBurger = document.querySelector('.navbar-burger');
-            navbarBurger.addEventListener('click', () => {
-                const target = navbarBurger.dataset.target;
-                const $target = document.getElementById(target);
-                navbarBurger.classList.toggle('is-active');
-                $target.classList.toggle('is-active');
-            });
-        });
+  <!-- About Us Modal -->
+  <div id="about-us-modal" class="modal">
+  <div class="modal-background"></div>
+  <div class="modal-card">
+    <header class="modal-card-head modal-card-custom-header">
+      <p class="modal-card-title">Welcome to FurEver Friends</p>
+        </header>
+    <section class="modal-card-body modal-card-custom-body">
+      <p>Here at FurEver Friends we want to help you find your new best friend! We have several great foster dogs that would love to come live with you! To start the journey to your best friend here are the next steps:</p>
+      <ol>
+        <li>Log in or create an account.</li>
+        <li>Navigate to our page of available foster dogs.</li>
+        <li>Look through the dogs we have available by navigating via the arrows on either side.</li>
+        <li>If you see a dog that looks like your next best friend, tap the heart next to their name!</li>
+        <li>From here, that dog will go into your "Favorited Dogs" section and we will reach out if it's a good fit!</li>
+      </ol>
+    </section>
+  </div>
+  <button class="modal-close is-large" aria-label="close"></button>
+  </div>
 
-    </script>
 
-     <!-- Hero container -->
-       <section class="hero is-primary is-medium">
-  <div class="hero-body">
-    <div class="container">
-      <!-- Card container -->
-      <div class="box" style="max-width: 600px; margin: 0 auto;">
-        <h1 class="title has-text-centered">
-          Looking for a New Friend?
-        </h1>
-        <h2 class="subtitle has-text-centered">
-          Find the perfect foster dog today!
-        </h2>
-        <div class="has-text-centered">
-          <a href="GetStarted.html" class="button is-bright is-large">
-            Get Started
-          </a>
-        </div>
+
+    <!-- Hero container -->
+      <section class="hero is-primary is-medium">
+<div class="hero-body">
+  <div class="container">
+    <!-- Card container -->
+    <div class="box" style="max-width: 600px; margin: 0 auto;">
+      <h1 class="title has-text-centered">
+        Looking for a New Friend?
+      </h1>
+      <h2 class="subtitle has-text-centered">
+        Find the perfect foster dog today!
+      </h2>
+      <div class="has-text-centered">
+        <a href="GetStarted.html" class="button is-bright is-large">
+          Get Started
+        </a>
       </div>
     </div>
   </div>
+</div>
 </section>
-    
-    <!-- The rest of our content -->
+  
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+        const navbarBurger = document.querySelector('.navbar-burger');
+
+        // Function to toggle the modal
+        function toggleModal() {
+            const aboutUsModal = document.getElementById('about-us-modal');
+            aboutUsModal.classList.toggle('is-active');
+        }
+
+        // Event listener to open the modal when 'About Us' is clicked
+        const aboutUsButton = document.getElementById('about-us-button');
+        aboutUsButton.addEventListener('click', (e) => {
+            e.preventDefault(); 
+            toggleModal();
+        });
+
+        // Event listener to close the modal when the close button is clicked
+        const modalClose = document.querySelector('.modal-close');
+        modalClose.addEventListener('click', toggleModal);
+    });
+</script>
 </body>
 </html>

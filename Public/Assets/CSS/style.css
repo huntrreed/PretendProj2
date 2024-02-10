@@ -60,6 +60,60 @@
   justify-content: flex-end;
 }
 
+/*About Us Modal*/
+.modal-card-custom-header,
+.modal-card-custom-body,
+.modal-card-custom-footer {
+  background-color: var(--white);
+  color: var(--dark);
+}
+
+.modal-card-custom-header {
+  align-items: center;
+  font-weight: bold;
+}
+
+.modal-card-custom-body ol {
+  padding-left: 20px;
+  padding-top: 2rem;
+  color: navy;
+  font-size: 1.3rem;
+}
+
+
+/* Modal Card Size Adjustment */
+.modal-card {
+  max-width: 600px;
+  width: auto;
+  margin: 0 auto;
+}
+
+/* Close Button Customization */
+.modal-close {
+  background: none;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
+
+.modal-card-title {
+  color: var(--dark);
+  font-size: 2rem;
+  font-weight: 800;
+}
+
+.modal-card-body {
+  position: relative;
+  padding: 20px;
+  font-size: 1.4rem;
+  font-weight: 500;
+}
+
+/*overlay color on the rest of the background when the modal pops up*/
+.modal-background {
+  background-color: rgba(0, 0, 0, 0.5); 
+}
+
 /*---------hero container main page (index.html)-------*/
 .title {
   margin-bottom: 20px;
@@ -183,6 +237,9 @@
   background-color: var(--main);
   font-size: 3rem;
   color: var(--dark);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .carousel-arrow {

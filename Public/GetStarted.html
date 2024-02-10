@@ -24,49 +24,52 @@
         <div class="container">
             <div class="card" style="margin: 0 auto; max-width: 70%;">
                 <div class="card-content">
-                    <form>
+                    <!--  -->
+                    <form id="get-started-form" action="/api/users/get-started-form" method="post">                        <!-- Name field -->
                         <div class="field">
-                            <label class="label">Name</label>
-                            <div class="control">
-                              <input class="input" type="text" placeholder="First and Last Name">
-                            </div>
+                          <label class="label" for="name">Name</label>
+                          <div class="control">
+                            <input class="input" type="text" name="name" id="name" autocomplete="name">
                           </div>
+                        </div>
                           <!--Form Questions-->
                           <div class="field">
-                            <label class="label">Username</label>
-                            <div class="control has-icons-left has-icons-right">
-                              <input class="input is-success" type="text" placeholder="Username" value="bulma">
-                              <span class="icon is-small is-left">
-                                <i class="fas fa-user"></i>
-                              </span>
-                              <span class="icon is-small is-right">
-                                <i class="fas fa-check"></i>
-                              </span>
-                            </div>
-                            <p class="help is-success">This username is available</p>
-                          </div>
-                          <!--Password field, needs some validation to require characters, etc.-->
-                          <div class="field">
-                            <label class="label">Password</label>
-                            <div class="control has-icons-left">
-                                <input class="input" type="password" placeholder="Your Password">
+                            <label class="label" for="userName">Username</label>
+                            <div class="control">
+                                <input class="input" type="text" name="userName" id="userName" placeholder="userName" autocomplete="userName">
                                 <span class="icon is-small is-left">
-                                    <i class="fas fa-lock"></i>
+                                    <i class="fas fa-user"></i>
+                                </span>
+                                <span class="icon is-small is-right">
+                                    <i class="fas fa-check"></i>
                                 </span>
                             </div>
-                            <div class="field">
-                                <label class="label">Re-Enter Password</label>
-                                <div class="control has-icons-left">
-                                    <input class="input" type="password" placeholder="Your Password">
-                                    <span class="icon is-small is-left">
-                                        <i class="fas fa-lock"></i>
-                                    </span>
-                                </div>
-                        </div>
+                            <p class="help is-success">This username is available</p>
+                        </div>                          
+                          <!--Password field, needs some validation to require characters, etc.-->
                           <div class="field">
-                            <label class="label">Email</label>
-                            <div class="control has-icons-left has-icons-right">
-                              <input class="input is-danger" type="email" placeholder="Your Email" value="hello@">
+                            <label class="label" for="password">Password</label>
+                            <div class="control">
+                              <input class="input" type="password" name="password" id="password" placeholder="Your Password">
+                              <span class="icon is-small is-left">
+                                <i class="fas fa-lock"></i>
+                              </span>
+                            </div>
+                          </div>
+                            <div class="field">
+                                <label class="label" for="reEnterPassword">Re-Enter Password</label>
+                                <div class="control has-icons-left">
+                                  <input class="input" type="password" name="reEnterPassword" id="reEnterPassword" placeholder="Your Password">
+                                  <span class="icon is-small is-left">
+                                    <i class="fas fa-lock"></i>
+                                  </span>
+                                </div>
+                              </div>
+                        </div>
+                        <div class="field">
+                            <label class="label" for="email">Email</label>
+                            <div class="control">
+                              <input class="input is-danger" type="email" name="email" id="email" placeholder="Your Email" autocomplete="email">
                               <span class="icon is-small is-left">
                                 <i class="fas fa-envelope"></i>
                               </span>
@@ -78,97 +81,95 @@
                           </div>
                           
                           <div class="field">
-                            <label class="label">Are You Interested in Fostering a Senior Dog?</label>
+                            <label class="label" for="fosteringYes">Are You Interested in Fostering a Senior Dog?</label>
                             <div class="control">
                                 <label class="radio">
-                                    <input type="radio" name="seniorDog" value="yes">
+                                    <input type="radio" id="fosteringYes" name="fostering" value="true">
                                     Yes
                                 </label>
                                 <label class="radio">
-                                    <input type="radio" name="seniorDog" value="no">
+                                    <input type="radio" id="fosteringNo" name="fostering" value="false">
                                     No
                                 </label>
                             </div>
-                            </div>
+                        </div>
                     
-                            <div class="field">
-                                <label class="label">Do You Have Other Pets?</label>
-                                <div class="control">
-                                    <div class="select">
-                                        <select name="otherPets">
-                                            <option value="">Select dropdown</option>
-                                            <option value="dogs">Other dog(s)</option>
-                                            <option value="cats">Cat(s)</option>
-                                            <option value="other">Other Type of Pet(s)</option>
-                                        </select>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="field">
-                                <label class="label">Do You Have Children in your Home?</label>
-                                <div class="control">
-                                    <label class="radio">
-                                        <input type="radio" name="fencedYard" value="yes">
-                                        Yes
-                                    </label>
-                                    <label class="radio">
-                                        <input type="radio" name="fencedYard" value="no">
-                                        No
-                                    </label>
-                                </div>
-                            </div>
-                            <div class="field">
-                                <label class="label">Do You Have a Fenced In Yard?</label>
-                                <div class="control">
-                                    <label class="radio">
-                                        <input type="radio" name="fencedYard" value="yes">
-                                        Yes
-                                    </label>
-                                    <label class="radio">
-                                        <input type="radio" name="fencedYard" value="no">
-                                        No
-                                    </label>
-                                </div>
-                            </div>
-                            <!--This doesn't need to link to anything for our data, just thought it was pertinent to include-->
-                            <label class="label">What Is Your Previous Experience Caring for Dogs?</label>
+                          <div class="field">
+                            <label class="label" for="hasPets">Do You Have Other Pets?</label>
                             <div class="control">
-                                    <div class="select">
-                                        <select name="otherPets">
-                                            <option value="">Select dropdown</option>
-                                            <option value="NoExp">No Experience</option>
-                                            <option value="SomeExp">Some experience but never owned one</option>
-                                            <option value="PriorExp">I have owned a dog, but it was awhile ago</option>
-                                            <option value="ALotofExp">I have extensive experience caring for dogs</option>
-                                        </select>
+                              <div class="select">
+                                <select id="hasPets" name="hasPets">
+                                  <option value="">Select dropdown</option>
+                                  <option value="1">Other dog(s)</option>
+                                  <option value="2">Cat(s)</option>
+                                  <option value="3">Other Type of Pet(s)</option>                                </select>
                               </div>
                             </div>
-                    <!--These don't need to link to anything for our data, just thought they was pertinent to include-->
+                          </div>
                           <div class="field">
-                            <label class="label">Anything Else We Should Know?</label>
+                            <label class="label" for="hasKidsYes">Do You Have Children in your Home?</label>
                             <div class="control">
-                              <textarea class="textarea" placeholder="Other Information"></textarea>
+                                <label class="radio">
+                                    <input type="radio" id="hasKidsYes" name="hasKids" value="true">
+                                    Yes
+                                </label>
+                                <label class="radio">
+                                    <input type="radio" id="hasKidsNo" name="hasKids" value="false">
+                                    No
+                                </label>
+                            </div>
+                        </div>
+                        <div class="field">
+                          <label class="label" for="fencedYardYes">Do You Have a Fenced In Yard?</label>
+                          <div class="control">
+                              <label class="radio">
+                                  <input type="radio" id="fencedYardYes" name="fencedYard" value="true">
+                                  Yes
+                              </label>
+                              <label class="radio">
+                                  <input type="radio" id="fencedYardNo" name="fencedYard" value="false">
+                                  No
+                              </label>
+                          </div>
+                      </div>                            <div class="field">
+                                <label class="label" for="previousExp">What Is Your Previous Experience Caring for Dogs?</label>
+                                <div class="control">
+                                  <div class="select">
+                                    <select id="previousExp" name="previousExp">
+                                      <option value="">Select dropdown</option>
+                                      <option value="1">No Experience</option>
+                                      <option value="2">Some experience but never owned one</option>
+                                      <option value="3">I have owned a dog, but it was awhile ago</option>
+                                      <option value="4">I have extensive experience caring for dogs</option>                                    </select>
+                                  </div>
+                                </div>
+                              </div>
+                    <!--These don't need to link to anything for our data, just thought they was pertinent to include-->
+                    <div class="field">
+                        <label class="label" for="anythingElse">Other Information</label>
+                        <div class="control">
+                          <textarea class="textarea" name="anythingElse" id="anythingElse" placeholder="Other Information"></textarea>
                             </div>
                           </div>
-
                           <div class="field">
-                            <label class="label">Why Are You Interested in Fostering?</label>
+                            <label class="label" for="why">Why Are You Interested in Fostering?</label>
                             <div class="control">
-                              <textarea class="textarea" placeholder="Your Answer Here"></textarea>
+                              <textarea class="textarea" name="why" id="why" placeholder="Your Answer Here"></textarea>
                             </div>
                           </div>
                           <div class="field is-grouped">
                             <div class="control">
-                                <button class="button is-link">Submit</button>
-                            </div>
-                            <div class="control">
-                                <button type="button" class="button is-link is-light">Cancel</button>
-                            </div>
+                              <button type="submit" class="button is-link">Submit</button>
+                          </div>
+                          <div class="control">
+                              <button type="button" class="button is-link is-light">Cancel</button>
+                          </div>
                         </div>
                     </form>
                 </div>
             </div>
         </div>
     </section>
+    <script src="/public/js/users.js"></script>
 </body>
 </html>
