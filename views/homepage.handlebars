@@ -1,24 +1,53 @@
-<!-- Loop over each object in the projects array -->
-{{#each projects as |project| }}
-<div class="row mb-4 project">
-  <div class="col-md-5">
-    <h2>
-      <!-- Call helper function with triple brackets to render the emoji span as HTML -->
-      {{{get_emoji}}}
-      <a href="/project/{{project.id}}">{{project.name}}</a>
-    </h2>
-    <p>
-      <span for="img" aria-label="money">💲</span>
-      <!-- Pass needed_funding value to the helper function -->
-      <span class="dollar-amount">{{format_amount project.needed_funding}}</span>
-      needed!
-    </p>
-    <p>Created by {{project.user.name}} on {{format_date project.date_created}}</p>
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>{{title}}</title> <!-- Dynamic title -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.9.3/css/bulma.min.css">
+    <link rel="stylesheet" href="/css/style.css"> <!-- Root-relative path -->
+</head>
+<body>
+
+<!-- Navbar (can be turned into a partial if used on multiple pages) -->
+<nav class="navbar is-primary" role="navigation" aria-label="main navigation">
+  <div class="navbar-brand">
+    <img src="/images/Logo.png" alt="FurEver Friends Logo"> <!-- Root-relative path -->
   </div>
-  <div class="col-md-7">
-    <p>
-      {{project.description}}
-    </p>
+  <div class="navbar-center">
+    <p class="title">FurEver Friends</p> 
   </div>
-</div>
-{{/each}}
+  <div class="navbar-end">
+    <a class="navbar-item" href="#">Login</a>
+    <a class="navbar-item" id="about-us-button" href="#">About Us</a>
+  </div>
+</nav>
+
+  <!-- About Us Modal -->
+  <!-- ... Modal content remains the same ... -->
+
+<!-- Hero container -->
+<section class="hero is-primary is-medium">
+  <div class="hero-body">
+    <div class="container">
+      <!-- Card container -->
+      <div class="box" style="max-width: 600px; margin: 0 auto;">
+        <h1 class="title has-text-centered">
+          Looking for a New Friend?
+        </h1>
+        <h2 class="subtitle has-text-centered">
+          Find the perfect foster dog today!
+        </h2>
+        <div class="has-text-centered">
+          <a href="/get-started" class="button is-bright is-large"> <!-- Handlebars path -->
+            Get Started
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<script src="/js/main.js"></script> <!-- Root-relative path, consider moving inline JS here -->
+</body>
+</html>
