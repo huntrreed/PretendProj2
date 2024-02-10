@@ -2,6 +2,7 @@ require('dotenv').config();
 
 const Sequelize = require('sequelize');
 const session = require('express-session');
+const SequelizeStore = require('connect-session-sequelize')(session.Store);
 const path = require('path');
 const express = require('express');
 const exphbs = require('express-handlebars');
@@ -9,11 +10,22 @@ const helpers = require('./utils/helpers');
 const cors = require('cors');
 
 const sequelize = require('./config/connection.js');
-const { sess } = require('./models/session');
 
 const app = express();
 
-app.use(session(sess));
+// Update your session configuration
+app.use(session({
+  secret: process.env.SESSION_SECRET, // Set a session secret in your .env file
+  store: new SequelizeStore({
+    db: sequelize,
+  }),
+  resave: false,
+  saveUninitialized: false, // may want to set to true depending on your needs
+  cookie: {
+    secure: process.env.NODE_ENV === 'production', // Cookie is only sent over HTTPS
+    maxAge: 24 * 60 * 60 * 1000 // 24 hours
+  }
+}));
 
 app.use(
   cors({
