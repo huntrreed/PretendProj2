@@ -43,6 +43,10 @@ app.use((req, res, next) => {
 
 const PORT = process.env.PORT || 5502;
 
+const hbs = engine({
+  // Configuration options if you have any
+});
+
 app.engine('handlebars', exphbs({
   defaultLayout: 'main', // Name of the main layout
   layoutsDir: 'views/layouts/', // Directory for layout files
