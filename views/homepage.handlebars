@@ -1,16 +1,6 @@
 {{!-- Set the layout to use the main layout (main.handlebars) --}}
 {{!< main}}
-
-{{!-- Dynamic title can be passed when rendering the template from the route --}}
-<head>
-    <meta charset="UTF-8">
-    <title>{{title}}</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.9.3/css/bulma.min.css">
-    <link rel="stylesheet" href="/Public/Assets/CSS/style.css">
-</head>
 <body>
-
 {{!-- The navbar is included from the partials --}}
 {{> navbar}}
 
@@ -35,6 +25,5 @@
     </div>
 </section>
 
-<script src="/js/main.js"></script>
 </body>
 </html>
