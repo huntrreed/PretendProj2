@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Your Information</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.9.3/css/bulma.min.css">
+    <link rel="stylesheet" href="/Public/Assets/CSS/style.css"> 
+</head>
+<body>
+
+<nav class="navbar is-primary" role="navigation" aria-label="main navigation">
+    <div class="navbar-brand">
+        <img src="./Assets/Images/Logo.png" alt="FurEver Friends Logo">
+    </div>
+    <div class="navbar-center">
+        <p class="title">FurEver Friends</p> 
+    </div>
+</nav>
+
+
+<div class="container mt-5">
+    <h1 class="title is-2 has-text-centered">Tell us a bit more about you so we can match you to the right fur-ever friend!</h1>
+    <div class="columns is-centered">
+        <div class="column is-half">
+            <form id="get-started-form" action="/api/users/get-started-form" method="post">
+                <div class="field">
+                    <label class="label" for="name">Name</label>
+                    <div class="control">
+                        <input class="input" type="text" name="name" id="name" autocomplete="name">
+                    </div>
+                </div>
+                <!-- Form questions and fields go here -->
+                <!-- Make sure to close the form tag -->
+            </form>
+        </div>
+    </div>
+</div>
+
+<script src="/public/js/users.js"></script>
+</body>
+</html>
