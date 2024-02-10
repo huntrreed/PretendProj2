@@ -5,7 +5,7 @@ const session = require('express-session');
 const SequelizeStore = require('connect-session-sequelize')(session.Store);
 const path = require('path');
 const express = require('express');
-const { engine } = require('express-handlebars'); // Corrected require for express-handlebars
+const exphbs = require('express-handlebars');
 const helpers = require('./utils/helpers');
 const cors = require('cors');
 
@@ -13,7 +13,7 @@ const sequelize = require('./config/connection.js');
 
 const app = express();
 
-const hbs = engine({
+const hbs = exphbs({
   helpers: helpers,
   extname: '.handlebars', // Set the extension name
   defaultLayout: 'main', // Set the default layout
