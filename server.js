@@ -59,7 +59,7 @@ app.use((req, res, next) => {
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
-app.use(express.static(path.join(__dirname, 'Public')));
+app.use(express.static(path.join(__dirname, 'public')));
 
 // Define a route for the root path to render the 'homepage' view
 app.get('/', (req, res) => {
