@@ -133,7 +133,7 @@
 }
 /*hero background with paw print*/
 .hero-body {
-  background-image: url("../Images/HeroBackground.jpg");
+  background-image: image('/Public/Assets/Images/HeroBackground.jpg');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
