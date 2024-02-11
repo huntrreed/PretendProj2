@@ -33,9 +33,9 @@ app.use(session({
     db: sequelize,
   }),
   resave: false,
-  saveUninitialized: false, // may want to set to true depending on your needs
+  saveUninitialized: false, 
   cookie: {
-    secure: process.env.NODE_ENV === 'production', // Cookie is only sent over HTTPS
+    secure: process.env.NODE_ENV === 'production', 
     maxAge: 24 * 60 * 60 * 1000 // 24 hours
   }
 }));
