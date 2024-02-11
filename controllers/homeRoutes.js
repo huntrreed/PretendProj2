@@ -107,6 +107,16 @@ router.get('/dog/:id', async (req, res) => {
   }
 });
 
+
+//get started button goes to form 
+
+router.get('/yourInfo', (req, res) => {
+  res.render('yourInfo', {
+    logged_in: req.session.logged_in,
+  });
+});
+
+
 //if user is not logged in they are directed to login page
 router.get('/profile', withAuth, async (req, res) => {
   try {
